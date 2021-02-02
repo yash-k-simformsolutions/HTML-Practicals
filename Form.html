@@ -1,0 +1,130 @@
+<!-- Form -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <title>Form</title>
+
+        <style>
+            body{
+                background: url('https://bebs.org/wp-content/uploads/2019/05/form-background-1024x683.jpg');
+            }
+
+            .form{
+                display: flex;
+                justify-content: center;
+            }
+            
+            form{
+                margin: 3rem 0;
+                padding: 25px;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            .form-detail{
+                margin: 20px;
+            }
+
+            input{
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                outline: none;
+                margin-top: 8px;
+                font-size: 18px;
+                background-color: #e8e8e4;
+            }
+
+            input:not(.normal){
+                width: 100%;
+                padding: 10px;
+                border-radius: 5px;
+            }
+
+            label{
+                font-size: 25px;
+                color: #fff;
+            }
+
+            .form-detail, .form-name{
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                /* margin: 20px; */
+            }
+
+            .form-horizontal-detail{
+                display: flex;
+                justify-content: space-around;
+                flex-direction: row;
+                /* margin: 20px; */
+            }
+
+            .form-name{
+                margin: 20px;
+                margin-bottom: 0;
+            }
+
+            .form-gender{
+                margin-left: 20px;
+            }
+
+            #submit{
+                font-size: 18px;
+                font-weight: 800;
+                margin: 1rem 15rem;
+                padding: 10px;
+                background-color: springgreen;
+                color: white;
+                border-radius: 15px;
+                border: none;
+            }
+
+            h1{
+                text-align: center;
+                color: #d9d9f3;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>HTML Form</h1>
+        <div class="form">
+            <form action="">
+                <div class="form-horizontal-detail">
+                    <div class="form-name">
+                        <label for="firstname">First Name</label>
+                        <input type="text" placeholder="first name" name="firstname" required> 
+                    </div>
+                    <div class="form-name">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" placeholder="last name" name="lastname" required>
+                    </div>
+                </div>
+                <div class="form-detail">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="email" required>
+                </div>
+                <div class="form-detail">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" placeholder="password" required>
+                </div>
+                <div class="form-horizontal-detail">
+                    <div class="form-gender">
+                        <label for="gender">Male</label>
+                        <input type="radio" name="gender" class="normal">
+                    </div>
+                    <div class="form-gender">
+                        <label for="gender">Female</label>
+                        <input type="radio" name="gender" class="normal">
+                    </div>
+                </div>
+                <div class="form-detail">
+                    <input type="date" name="date" class="normal">
+                </div>
+                <button id="submit">Submit</button>
+            </form>       
+        </div>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Audio & Video</title>
+
+    <style>
+        body{
+            background-color: rgb(238, 209, 209);
+        }
+
+        h1, h3{
+            text-align: center;
+            color: #000;
+            font-weight: 900;
+        }
+        .video{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 5rem;
+        }
+
+        .play-video{
+            margin: 10px;
+            border: 3px solid #000;
+        }
+
+        .audio{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Audio and Video example</h1>
+
+    <div class="video">
+        <div class="play-video" id="video-1">
+            <h3>Default Video</h3>
+            <video width="500px" height="300px" controls>
+                <source src="./Media/demo.mp4" type="video/mp4">
+            </video>
+        </div>
+            
+        <div class="play-video" id="video-2">
+            <h3>Video with AutoPlay</h3>
+            <video width="500px" height="300px" controls autoplay>
+                <source src="./Media/demo.mp4" type="video/mp4">
+            </video>
+        </div>
+                
+        <div class="play-video" id="video-3">
+            <h3>Video with Loop</h3>
+            <video width="500px" height="300px" controls loop>
+                <source src="./Media/demo.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <div class="play-video" id="video-4">
+            <h3>Video with Poster</h3>
+            <video width="500px" height="300px" controls poster="https://blog.lingoda.com/wp-content/uploads/2020/10/How-To-Say-Hello-in-10-Languages.jpg">
+                <source src="./Media/demo.mp4" type="video/mp4">
+            </video>
+        </div> 
+    </div>
+
+    <div class="audio">
+        <h3>Demo song</h3>
+        <audio controls>
+            <source src="./Media/_Birthday_Bash__FULL_VIDEO_SONG___Yo_Yo_Honey_Singh___Dilliwaali_Zaalim_Girlfrie.m4a" type="audio/mpeg">
+        </audio>
+    </div>
+</body>
+</html>
